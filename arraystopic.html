@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+    <script>
+
+        /***************************************************/
+        //make the cloned array
+        let array1 = [10,20,30,40,50];
+        console.log(array1);   //[10, 20, 30, 40, 50]
+        let array2 = [...array1];
+        console.log(array2);  //[10, 20, 30, 40, 50]
+        /***************************************************/
+
+
+        /***************************************************/
+        //length of array
+        let array3 = [10,20,30,40,50,60,70,80,90,100];
+        console.log(array3.length);   //10
+        array3.length = 5;
+        console.log(array3.length);   //5
+        console.log(array3);          //[10, 20, 30, 40, 50]
+        let array4 = [undefined,undefined];
+        console.log(array4.length);  //2
+        let array5 = [null,null];
+        console.log(array5.length);   //2
+        let array6 = [undefined,null];
+        console.log( array6.length );  //2
+        /***************************************************/
+
+
+        /***************************************************/
+        //push and pop operations
+        let array7 = [20,30,40];
+        console.log(array7);         //[20, 30, 40]
+        array7.push(50);
+        console.log(array7);        //[20, 30, 40, 50]
+        array7.unshift(10);
+        console.log(array7);        //[10, 20, 30, 40, 50]
+        /***************************************************/
+
+
+        /***************************************************/
+        //delete the array elements
+        let array8 = [10,20,30,40,50,60,70,80,90,100]; 
+        console.log(array8); //[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+        array8.pop();
+        console.log(array8); //[10, 20, 30, 40, 50, 60, 70, 80, 90]
+        array8.shift();
+        console.log(array8);  //[20, 30, 40, 50, 60, 70, 80, 90]
+        array8.splice(0,1);
+        console.log(array8);  //[30, 40, 50, 60, 70, 80, 90]
+        array8.splice(3,2);
+        console.log(array8);  //[30, 40, 50, 80, 90]
+        array8.splice(0,0,10,20);
+        console.log(array8);  //[10, 20, 30, 40, 50, 80, 90]
+        array8.splice(4,1,50,60,70);
+        console.log(array8);  //[10, 20, 30, 40, 50, 60, 70, 80, 90]
+        array8.splice(9,0,100);
+        console.log(array8);   //[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+        let array9 = [10,20,30,40,50];
+        console.log( array9.slice(1,4) );   //[20, 30, 40]
+        console.log( array9.slice(2) );     //[30, 40, 50]
+        console.log( array9.slice(2,-1));   //[30, 40]
+        console.log( array9.slice(0,-4) );  //[10]
+
+        /***************************************************/
+
+        /**************************************************/
+        //remove duplicate elements in array
+        console.log( [...new Set([1,2,1,3,1,2])] ); //[1, 2, 3]   
+        console.log(_.uniq([10,20,10]));   //[10, 20]
+        /**************************************************/
+
+    </script>
+</html>
