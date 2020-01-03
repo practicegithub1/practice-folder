@@ -4,27 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Rollick</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-   <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-   <!-- Latest compiled and minified JavaScript -->
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-   <script type="text/javascript">
+    <script type="text/javascript">
     'use strict'
         var links = [ 'https://www.tutorialsteacher.com/',
                       'https://www.tutorialspoint.com/',
                       'https://www.atlassian.com/software/jira',
                       'https://javabrains.io/topics/'
-                      
-                    //   'https://www.w3schools.com/',
-                    //   'https://www.youtube.com/embed/P6N9782MzFQ',
-                    //   'https://www.c-sharpcorner.com/article/crud-operation-in-angular-6/'
         ];
-
         var time = 3000;
         links.forEach(myFunction);
         function myFunction(item) {
@@ -32,11 +24,10 @@
              var oldIfrm = document.querySelector("iframe");
              var ifrm = document.createElement("iframe");
              ifrm.setAttribute("src", item);
-             ifrm.style.width = "1400px";
+             ifrm.style.width = "1380px";
              ifrm.style.height = "900px";
-             ifrm.style.marginTop = '10px';
              ifrm.style.textAlign = 'center';
-             ifrm.style.marginLeft= '10px';
+             ifrm.style.margin = '10px 0px 0px 20px';
              if(oldIfrm){
                 document.body.replaceChild(ifrm,oldIfrm);                 
              }
@@ -44,11 +35,12 @@
          }, time);
          time = time+3000;
 
-   }
-</script> 
-      
+      }
+    </script> 
 </head>
-<body style="margin-top: 10px" class="text-center">
-    <img src="rollick.jpe" width="30%" style="margin-left: 15px; margin-right:15px; text-align: center" class="img-responsive img-thumbnail" alt="rollick logo"> 
+<body>
+    <div style="margin-top: 10px" class="text-center col-xs-12">
+           <img src="rollick.jpe" width="30%" class="img-responsive img-thumbnail" alt="rollick logo"> 
+    </div>
 </body>
 </html>
